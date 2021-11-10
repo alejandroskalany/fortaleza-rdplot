@@ -5,13 +5,12 @@ from tkinter import filedialog
 from tkinter import *
 import tkinter as tk 
 from tkinter import Tk
-from numpy.core.defchararray import upper
 import ctypes
 
 user_depth = 0
 user_color = 0
 edges = np.zeros((2,2),np.int)
-counter = 0
+counter = 0 
 
 
 def get_edges():
@@ -135,7 +134,7 @@ def masking():
     elif user_color=='B':
         track_slice = cv2.bitwise_and(new_image, new_image, mask=blue_mask)
 
-    ###send variable track_slice to digitizing program
+    ###send variable track_slice -> digitizing program
 
     #cv2.namedWindow("mask", cv2.WINDOW_NORMAL)
 
